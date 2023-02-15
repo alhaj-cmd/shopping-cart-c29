@@ -12,14 +12,23 @@ function updateCaseNumber(isIncrease){
     }
     caseNumberField.value = newCaseNumber;
     return newCaseNumber;
+
 }
+
+function updateCaseNumberTotal(newCaseNumber){
+    const caseTotalPrice  = newCaseNumber*59;
+    const caseTotalElement  = document.getElementById('case-total');
+    caseTotalElement.innerText  = caseTotalPrice;
+
+}
+
 document.getElementById('btn-case-plus').addEventListener('click', function(){
   const newCaseNumber  = updateCaseNumber(true);
-  const caseTotalPrice  = newCaseNumber*59;
-  const caseTotalElement  = document.getElementById('case-total');
-  caseTotalElement.innerText  = caseTotalPrice;
+  updateCaseNumberTotal(newCaseNumber)
+
 })
 document.getElementById('btn-case-minus').addEventListener('click', function(){
   const newCaseNumber = updateCaseNumber(false);
-  console.log(newCaseNumber);
+//   console.log(newCaseNumber);
+updateCaseNumberTotal(newCaseNumber)
 })
