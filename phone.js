@@ -23,21 +23,7 @@ function updatePhoneNumberTotal(newPhoneNumber){
 
 }
 
-function currentPhoneTotal(elementId){
-    const phoneTotalElement  = document.getElementById(elementId);
-    const currentPhoneTotalsring = phoneTotalElement.innerText;
-    const currentPhoneTotal =parseInt(currentPhoneTotalsring);
-    return currentPhoneTotal;
-}
 
-function calculateSubTotal(){
-    // calculate
-    const currentPhoneNumber =currentPhoneTotal('phone-total');
-    const currentCaseNumber =currentPhoneTotal('case-total');
-    const currentsubTotal = currentPhoneNumber + currentCaseNumber;
-    const subTotalElement = document.getElementById('sub-total');
-    subTotalElement.innerText = currentsubTotal;
-}
 
 document.getElementById('btn-phone-plus').addEventListener('click', function(){
   const newPhoneNumber  = updatePhoneNumber(true);

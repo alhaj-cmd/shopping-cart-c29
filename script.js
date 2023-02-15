@@ -25,10 +25,16 @@ function updateCaseNumberTotal(newCaseNumber){
 document.getElementById('btn-case-plus').addEventListener('click', function(){
   const newCaseNumber  = updateCaseNumber(true);
   updateCaseNumberTotal(newCaseNumber)
+//   calculate
+calculateSubTotal()
 
 })
 document.getElementById('btn-case-minus').addEventListener('click', function(){
   const newCaseNumber = updateCaseNumber(false);
 //   console.log(newCaseNumber);
 updateCaseNumberTotal(newCaseNumber)
+
+// calculate
+calculateSubTotal()
+
 })
